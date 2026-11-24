@@ -1,0 +1,104 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Liberty",
+            "type": "shell",
+            "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "args": ["${workspaceFolder}\\liberty_grid_to_config.py"],
+            "options": { "cwd": "${workspaceFolder}\\output" },
+            "presentation": { "reveal": "always", "focus": true, "panel": "dedicated", "clear": true },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Magma",
+            "type": "shell",
+            "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "args": ["${workspaceFolder}\\magma_grid_to_config.py"],
+            "options": { "cwd": "${workspaceFolder}\\output" },
+            "presentation": { "reveal": "always", "focus": true, "panel": "dedicated", "clear": true },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run RSA GCV 4W Comp",
+            "type": "shell",
+            "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "args": ["${workspaceFolder}\\rsa_gcv4w_comp_to_config.py"],
+            "options": { "cwd": "${workspaceFolder}\\output" },
+            "presentation": { "reveal": "always", "focus": true, "panel": "dedicated", "clear": true },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run RSA Private Car",
+            "type": "shell",
+            "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "args": ["${workspaceFolder}\\rsa_pvtcar_to_config.py"],
+            "options": { "cwd": "${workspaceFolder}\\output" },
+            "presentation": { "reveal": "always", "focus": true, "panel": "dedicated", "clear": true },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run United (PDF)",
+            "type": "shell",
+            "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "args": ["${workspaceFolder}\\united_commission_to_config.py"],
+            "options": { "cwd": "${workspaceFolder}\\output" },
+            "presentation": { "reveal": "always", "focus": true, "panel": "dedicated", "clear": true },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Shriram (broker grid)",
+            "type": "shell",
+            "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "args": ["${workspaceFolder}\\shriram_broker_grid_to_config.py"],
+            "options": { "cwd": "${workspaceFolder}\\output" },
+            "presentation": { "reveal": "always", "focus": true, "panel": "dedicated", "clear": true },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Shriram (two-wheeler)",
+            "type": "shell",
+            "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "args": ["${workspaceFolder}\\shriram_2w_to_config.py"],
+            "options": { "cwd": "${workspaceFolder}\\output" },
+            "presentation": { "reveal": "always", "focus": true, "panel": "dedicated", "clear": true },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Go Digit",
+            "type": "shell",
+            "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "args": ["${workspaceFolder}\\godigit_agency_to_config.py"],
+            "options": { "cwd": "${workspaceFolder}\\output" },
+            "presentation": { "reveal": "always", "focus": true, "panel": "dedicated", "clear": true },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run SBI General",
+            "type": "shell",
+            "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "args": ["${workspaceFolder}\\sbi_grid_to_config.py"],
+            "options": { "cwd": "${workspaceFolder}\\output" },
+            "presentation": { "reveal": "always", "focus": true, "panel": "dedicated", "clear": true },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run ICICI Lombard",
+            "type": "shell",
+            "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "args": ["${workspaceFolder}\\icici_grid_to_config.py"],
+            "options": { "cwd": "${workspaceFolder}\\output" },
+            "presentation": { "reveal": "always", "focus": true, "panel": "dedicated", "clear": true },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run IndusInd General (Reliance)",
+            "type": "shell",
+            "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+            "args": ["${workspaceFolder}\\indusind_grid_to_config.py"],
+            "options": { "cwd": "${workspaceFolder}\\output" },
+            "presentation": { "reveal": "always", "focus": true, "panel": "dedicated", "clear": true },
+            "problemMatcher": []
+        }
+    ]
+}

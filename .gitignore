@@ -1,0 +1,49 @@
+# ============================================================
+# grid_tools - what is NOT committed: regenerable, machine-local or secret
+# ============================================================
+
+# --- Python ---
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Node (web app) ---
+node_modules/
+
+# --- Secrets and machine-local settings (never commit) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+.claude/settings.local.json
+
+# --- Web app runtime data: SQLite database, uploaded grids, job outputs, remembered rules ---
+webapp/data/
+
+# --- Generated output: the upload CSVs and review workbooks every run writes ---
+output/
+regression/out/
+input/
+
+# --- Stray run products dropped in the project root ---
+/*_UPLOAD_*.csv
+/*_error_*.txt
+
+# --- Local pre-git safety copies (CLAUDE.md, "Rules for any fix", rule 6) ---
+backups/
+
+# --- Office lock files, logs, OS clutter ---
+~$*
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+desktop.ini

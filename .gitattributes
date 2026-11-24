@@ -1,0 +1,9 @@
+# Normalise line endings of text files (source, docs), but keep the data files
+# byte for byte: check_regressions.py compares outputs byte for byte.
+* text=auto
+*.csv  -text
+*.xlsx binary
+*.xlsb binary
+*.xls  binary
+*.pdf  binary
+*.db   binary

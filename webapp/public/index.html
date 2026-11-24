@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grid agent</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232b5fd9'/%3E%3Cpath d='M8 9h16M8 16h16M8 23h10' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body data-pane="work">
+  <header class="top">
+    <div class="top-in">
+      <a class="brand" href="#/">Grid agent</a>
+      <button id="signout" type="button" class="link" hidden>Sign out</button>
+    </div>
+  </header>
+
+  <!-- The sign-in screen: the only thing that is not part of the one page below. -->
+  <main id="login" tabindex="-1" hidden></main>
+
+  <!-- The one page: jobs on the left, "New run" and the selected job in the middle, the memory on the right. app.js fills the three columns. -->
+  <div id="shell" class="shell" hidden>
+    <section id="col-jobs" class="col panel rail rail-jobs" aria-label="Jobs" tabindex="-1"></section>
+    <main id="main" class="col col-work" tabindex="-1"></main>
+    <aside id="col-memory" class="col panel rail rail-memory" aria-label="Memory" tabindex="-1"></aside>
+  </div>
+
+  <!-- Narrow screens show one column at a time; this bar switches between them (hidden on a wide screen, where all three are on show). -->
+  <nav id="nav" class="tabs" aria-label="Sections" hidden>
+    <a href="#/jobs" data-nav="jobs">Jobs<span id="tab-badge" class="badge" hidden></span></a>
+    <a href="#/" data-nav="work">Run</a>
+    <a href="#/memory" data-nav="memory">Memory</a>
+  </nav>
+
+  <div id="toast" role="status" aria-live="assertive"></div>
+  <noscript><p class="wrap">This page needs JavaScript.</p></noscript>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

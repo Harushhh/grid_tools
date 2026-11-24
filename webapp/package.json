@@ -1,0 +1,20 @@
+{
+  "name": "grid-pipeline-web",
+  "version": "0.1.0",
+  "description": "Web front end for the insurer grid converters: upload, run, answer cards, remember (human-in-the-loop with a rule memory)",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env --disable-warning=ExperimentalWarning server.js",
+    "test": "node --disable-warning=ExperimentalWarning --test --test-concurrency=1 \"test/*.test.js\"",
+    "test:fast": "node --disable-warning=ExperimentalWarning --test \"test/notes.test.js\" \"test/aliases_bulk.test.js\" \"test/memory.test.js\" \"test/api.test.js\" \"test/runner.test.js\" \"test/advisor.test.js\" \"test/isolation.test.js\""
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^5.3.0",
+    "multer": "^2.5.0"
+  }
+}

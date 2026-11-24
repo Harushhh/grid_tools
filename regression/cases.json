@@ -1,0 +1,650 @@
+{
+  "_about": "Known-good grids. A fix for a NEW grid layout must leave all of these producing byte-identical output. Run: python check_regressions.py   (re-record after an intended change: python check_regressions.py --bless)  'flagged' = rows carrying 'Manual Review Required' in remarks (text rules the script could not apply).",
+  "cases": [
+    {
+      "name": "liberty_sep26",
+      "script": "liberty_grid_to_config.py",
+      "args": [
+        "--grid",
+        "regression/inputs/liberty_sep26.xlsx",
+        "--from-date",
+        "01/09/2026",
+        "--to-date",
+        "31/03/2030",
+        "--ref",
+        "regression/references/liberty_sep26_rates_export.csv"
+      ],
+      "answers": [
+        "y"
+      ],
+      "expect": {
+        "rows": 23690,
+        "questions": 0,
+        "new": 680,
+        "removed": 0,
+        "changed": 0,
+        "flagged": 5880
+      }
+    },
+    {
+      "name": "liberty_jul26",
+      "script": "liberty_grid_to_config.py",
+      "args": [
+        "--grid",
+        "regression/inputs/liberty_jul26.xlsx",
+        "--from-date",
+        "01/07/2026",
+        "--to-date",
+        "20/03/2030"
+      ],
+      "answers": [
+        "",
+        "5",
+        "y"
+      ],
+      "note": "July has SPOC/ZH columns, '<1.5L' written without a space for 4 geos, and no Electric column: answer 5 = 'Electric same as Petrol'",
+      "expect": {
+        "rows": 23154,
+        "questions": 1,
+        "flagged": 5600
+      }
+    },
+    {
+      "name": "rsa_gcv4w_oct26",
+      "script": "rsa_gcv4w_comp_to_config.py",
+      "args": [
+        "--grid",
+        "regression/inputs/rsa_gcv4w_oct26.xlsx",
+        "--from-date",
+        "01/10/2026",
+        "--to-date",
+        "31/03/2030",
+        "--ref",
+        "regression/references/rsa_gcv4w_oct26_rates_export.csv"
+      ],
+      "answers": [
+        "y"
+      ],
+      "note": "removed = the 36 Electric rows (OTHER_THAN_CV_<state>) that the October upload carries from an EV grid + 33,696 rows whose make is 'ASHOK' in the October upload; new = the same 33,696 rows with the make written 'Ashok', the way the make / model master spells it (25 Oct 2026, master adherence). Rates are unchanged: 0 changed.",
+      "expect": {
+        "rows": 67392,
+        "questions": 0,
+        "new": 33696,
+        "removed": 33732,
+        "changed": 0,
+        "flagged": 21168
+      }
+    },
+    {
+      "name": "rsa_gcv4w_v2_oct22",
+      "script": "rsa_gcv4w_comp_to_config.py",
+      "args": [
+        "--grid",
+        "regression/inputs/rsa_gcv4w_v2_oct22.xlsx",
+        "--from-date",
+        "22/10/2026",
+        "--to-date",
+        "31/03/2030"
+      ],
+      "answers": [
+        "",
+        "y"
+      ],
+      "note": "V2: New CV cut by weight (EAST -1 up to 12 T / 0 above; NORTH, SOUTH -2 / -1), WEST note says the existing grid continues (written anyway), effective 22/10/2026, NORTH region-discount notes listed as not applied",
+      "expect": {
+        "rows": 67392,
+        "questions": 0,
+        "flagged": 21168
+      }
+    },
+    {
+      "name": "magma_oct26",
+      "script": "magma_grid_to_config.py",
+      "args": [
+        "--grid",
+        "regression/inputs/magma_oct26_comprehensive.xlsx",
+        "--satp",
+        "regression/inputs/magma_oct26_satp.xlsb",
+        "--from-date",
+        "01/10/2026",
+        "--to-date",
+        "31/03/2030",
+        "--ref",
+        "regression/references/magma_oct26_reupload.csv"
+      ],
+      "answers": [
+        "y"
+      ],
+      "expect": {
+        "rows": 39102,
+        "questions": 0,
+        "new": 0,
+        "removed": 0,
+        "changed": 0,
+        "flagged": 0
+      }
+    },
+    {
+      "name": "rsa_pvtcar_oct26",
+      "script": "rsa_pvtcar_to_config.py",
+      "args": [
+        "--grid",
+        "regression/inputs/rsa_pvtcar_oct26.xlsx",
+        "--from-date",
+        "01/10/2026",
+        "--to-date",
+        "31/03/2030",
+        "--ref",
+        "regression/references/rsa_pvtcar_oct26_rates_export.csv"
+      ],
+      "answers": [
+        "y"
+      ],
+      "note": "new = 2,190 rows the October upload does not have: 405 for the 3 North-East clusters (ARUNACHAL..., JORHAT..., MEGHALAYA...) that the grid has and the upload left out, and 1,785 New rows for other makes (EX group, the note's flat 28%) - OTHER_MAKES_NEW = 'write', chosen by the user on 24 Oct 2026; with 'flag' the script gives the October upload's rows exactly. flagged = 0: every note is read or standing",
+      "expect": {
+        "rows": 19620,
+        "questions": 0,
+        "new": 2190,
+        "removed": 0,
+        "changed": 0,
+        "flagged": 0
+      }
+    },
+    {
+      "name": "rsa_pvtcar_sep26",
+      "script": "rsa_pvtcar_to_config.py",
+      "args": [
+        "--grid",
+        "regression/inputs/rsa_pvtcar_sep26.xlsx",
+        "--from-date",
+        "01/09/2026",
+        "--to-date",
+        "30/09/2026"
+      ],
+      "answers": [
+        "",
+        "y",
+        "y"
+      ],
+      "note": "September grid: the top-variant extra comes from the 'Top Variant Models Drive' block (4 points With NCB, 2 points Without NCB). No --ref: the September upload (regression/references/rsa_pvtcar_sep26_rates_export.csv) carries no engine-size bands, so tests/pvtcar_tests.py compares it per (cluster, sub_product, NCB, fuel, make group) instead - 0 differences. Answers: skip the earlier upload, confirm the past to_date, write the file.",
+      "expect": {
+        "rows": 19620,
+        "questions": 0,
+        "flagged": 0
+      }
+    },
+    {
+      "name": "united_jul26",
+      "script": "united_commission_to_config.py",
+      "args": [
+        "--grid",
+        "regression/inputs/united_jul26.pdf",
+        "--from-date",
+        "01/07/2026",
+        "--to-date",
+        "31/07/2026",
+        "--ref",
+        "regression/references/united_jul26_rates_export.csv"
+      ],
+      "answers": [
+        "y",
+        "y"
+      ],
+      "note": "United 'Revised commission structure' PDF (July 2026), built with the make / model and RTO masters in master\\. Names that differ from the upload only in capitals (Private_Car_All / Private_Car_ALL) count as the same. 367 keys match; the 5 changed are the Sub Annexure 4 rows, dated 01-07-2026 in the PDF and 01-04-2026 in the upload. removed = 43: 10 School Bus (the upload has a 9-state list, the PDF says All States), 10 PCV 3W (the upload's 40% list includes Madhya Pradesh, the PDF gives MP 25%), 23 Private Car rows of the upload that the PDF's segments do not give (Electric Old/New 22.5 split, RTO group for New / SAOD / SATP, 2500 cc rows without Diesel ...). new = 90: 20 PCV 3W, 10 School Bus, 20 GCV (Pondicherry, the STP rows of the Sub Annexure 3 groups), 40 Private Car. flagged = TW 5+5 (26) + MISCD Motor Trade / CPA (30) + Private Car (53: 3+3 not written, Sub Annexure 4 scope, master groups that lack models / RTOs). Answers: the to_date-in-the-past heads-up, then 'write anyway'",
+      "expect": {
+        "rows": 457,
+        "questions": 0,
+        "new": 90,
+        "removed": 43,
+        "changed": 5,
+        "flagged": 109
+      }
+    },
+    {
+      "name": "united_aug26",
+      "script": "united_commission_to_config.py",
+      "args": [
+        "--grid",
+        "regression/inputs/united_aug26.pdf",
+        "--from-date",
+        "01/08/2026",
+        "--to-date",
+        "31/08/2026"
+      ],
+      "answers": [
+        "",
+        "y",
+        "y"
+      ],
+      "note": "United August 2026 circular (04001041.pdf, effective 01-08-2026; cover letter on page 1 is a scan, not read by the script - reported as a warning). New layout: 'Revised Pay-out' headings, the Private Car table by cc x states with a revised commission only (policy groups: Bundled 1+3, Package/SATP, SAOD, Electric), Sub Annexure 2 = 31 Rajasthan RTOs (GCV 2000-3500 kg, 56.5%), Sub Annexure 3 = the 40% Private Car RTOs. No upload to compare with (no --ref): the dates are 01/08/2026-31/08/2026 as in July. Groups come from CIRCULAR_GROUPS for 01/08/2026 (UNITED_RJ_*, UNITED_CAR_RTO_Annexure3 / EX_Annexure3). flagged 163 = TW 5+5 (26) + Motor Trade / CPA (60) + Private Car 3+3 / Long term Liability (97, every Private Car row) + 14 Package rows for some states that also cover the 40% RTOs + master groups that differ from the circular (the RJ Annexure-2 group lacks 13 of the circular's 31 RTOs, the car annexure group lacks RJ06 RJ07 RJ19 RJ27, the EX group lacks the 99 MP RTOs). Answers: skip the earlier-upload question, the to_date-in-the-past heads-up, then 'write anyway'",
+      "expect": {
+        "rows": 511,
+        "questions": 0,
+        "flagged": 163
+      }
+    },
+    {
+      "name": "united_oct26",
+      "script": "united_commission_to_config.py",
+      "args": [
+        "--grid",
+        "regression/inputs/united_oct26.pdf",
+        "--from-date",
+        "26/10/2026",
+        "--to-date",
+        "31/03/2030"
+      ],
+      "answers": [
+        "",
+        "y"
+      ],
+      "note": "United October 2026 circular (04001051.pdf, effective 26-10-2026): a SCAN - 7 pages of pictures, no text, no tables - so the case runs the scan itself (regression/inputs/united_oct26.pdf) and the script finds its transcription regression/inputs/united_oct26.json - a transcription of the Motor tables (pages 3-7) read off the page images - by the SHA-256 of the PDF (source_sha256); a scan with no transcription stops with 'this PDF is a scan'. New wording: Seating Capacity bands, Two Wheeler (PCV), Taxis in one row for Package + SATP, Private Car with Existing + Revised Commission and SAOD for Non Electric & Electric. The PDF has NO Sub Annexure pages and the user's rule (26 Oct 2026) is: an annexure that is not in the document is NOT applied (never carried over from August) - so the GCV 2000-3500 kg MP/TN/UP/HR 15% and Rajasthan 35% payouts (Except RTOs listed in Sub Annexure 2) are written for the whole states (20 rows, flagged), and no 40% preferred-city rows are written. Dates 26/10/2026-31/03/2030 as the user typed. flagged 168 = TW 5+5 (26) + Motor Trade / CPA (30 rows) + the 20 GCV rows written without their annexure + all 92 Private Car rows (3+3, Long term Liability, no 40% annexure). Answers: skip the earlier-upload question, then write anyway",
+      "expect": {
+        "rows": 496,
+        "questions": 0,
+        "flagged": 168
+      }
+    },
+    {
+      "name": "shriram_oct26",
+      "script": "shriram_broker_grid_to_config.py",
+      "args": [
+        "--grid",
+        "regression/inputs/shriram_oct26.xlsx",
+        "--ref",
+        "regression/references/shriram_oct26_rates_export.csv",
+        "--from-date",
+        "01/10/2026",
+        "--to-date",
+        "31/03/2030"
+      ],
+      "answers": [],
+      "note": "First build (26 Oct 2026), revised 27 Oct with the user's working file (Private Car make rules, CPA, seating, tariff chain across T&C); hazardous note flagged (default), unchanged rows keep the earlier from_date. NOT yet accepted. Answer key = the user's portal export of the products in this grid (6,911 rows, no Two-Wheeler) + regression/references/shriram_oct26_working_mapping.csv (their row-by-row mapping). Changed 27 Oct 2026 (the user): STP rows carry is_ncb NA and is_zd NA, and where grid rows give one entry different payins the LOWEST is written (listed in <out>_lowest_rate_chosen.csv); the expectations below are the numbers after that change. Changed 4 Nov 2026 (the user's corrections of the November upload, see lessons_learned.md): notes the user fixed by hand are now read (Bolero Model only / Except Bolero Model, taxi Dzire / Ambasador / EXCLUDING M&M, NCB Cases 20% and Above, nil-dep payout, cc range exclusion, M&M >1500 cc, goods 3W other than diesel, the EECO / Bolero carve-out of sibling rows) and change notes ('Disc by 5% & PO by 2% increased') are standing; the expectations below are the numbers after that change.",
+      "expect": {
+        "rows": 6659,
+        "questions": 0,
+        "new": 4047,
+        "removed": 4241,
+        "changed": 13,
+        "flagged": 343
+      }
+    },
+    {
+      "name": "shriram_2w_oct26",
+      "script": "shriram_2w_to_config.py",
+      "args": [
+        "--grid",
+        "regression/inputs/shriram_2w_oct26.xlsx",
+        "--broker-grid",
+        "regression/inputs/shriram_2w_oct26_broker-grid.xlsx",
+        "--ref",
+        "regression/references/shriram_2w_oct26_rates_export.csv",
+        "--from-date",
+        "01/10/2026",
+        "--to-date",
+        "31/03/2030"
+      ],
+      "answers": [],
+      "note": "First build (27 Oct 2026) of the Shriram two-wheeler script: New Business (1+5) + Rollover (1+1 / STP); SAOD not converted; the 10 'Rs.' fixed-amount grid rows are 14 flat cards (pi_flat_amount, rates 0; STP On TP, 1+1 On Net, po_flat_amount = 70% of pi_flat_amount - the user's rules of 27 Oct); IRDA on STP / withdrawn rows are listed in *_not_written.csv. NOT yet accepted. Answer keys = the August 2026 TW upload (partial, 148 rows) and the user's September working file (tests/shriram_2w_working_compare.py).",
+      "expect": {
+        "rows": 543,
+        "questions": 0,
+        "new": 505,
+        "removed": 110,
+        "changed": 6,
+        "flagged": 229
+      }
+    },
+    {
+      "name": "shriram_sep26",
+      "script": "shriram_broker_grid_to_config.py",
+      "args": [
+        "--grid",
+        "regression/inputs/shriram_sep26.xlsx",
+        "--from-date",
+        "01/09/2026",
+        "--to-date",
+        "31/03/2030"
+      ],
+      "answers": [
+        "",
+        ""
+      ],
+      "note": "Untouched September 2026 broker grid (27 Oct 2026). Guards the month-specific sheet name GRID SEP' 26 and the identical-header short-term sheet. First build, NOT accepted; 4,000 of 4,802 GCV 4W keys match the user's September GCV 4W upload (SGIC GCV4W UPLOAD.csv). Changed 27 Oct 2026 (the user): STP rows carry is_ncb NA and is_zd NA, and where grid rows give one entry different payins the LOWEST is written (listed in <out>_lowest_rate_chosen.csv); the expectations below are the numbers after that change. Changed 4 Nov 2026 (the user's corrections of the November upload, see lessons_learned.md): notes the user fixed by hand are now read (Bolero Model only / Except Bolero Model, taxi Dzire / Ambasador / EXCLUDING M&M, NCB Cases 20% and Above, nil-dep payout, cc range exclusion, M&M >1500 cc, goods 3W other than diesel, the EECO / Bolero carve-out of sibling rows) and change notes ('Disc by 5% & PO by 2% increased') are standing; the expectations below are the numbers after that change.",
+      "expect": {
+        "rows": 6564,
+        "questions": 0,
+        "flagged": 367
+      }
+    },
+    {
+      "name": "shriram_2w_sep26",
+      "script": "shriram_2w_to_config.py",
+      "args": [
+        "--grid",
+        "regression/inputs/shriram_2w_sep26.xlsx",
+        "--broker-grid",
+        "regression/inputs/shriram_2w_sep26_broker-grid.xlsx",
+        "--from-date",
+        "01/09/2026",
+        "--to-date",
+        "31/03/2030"
+      ],
+      "answers": [
+        "",
+        ""
+      ],
+      "note": "Untouched September 2026 two-wheeler grid (27 Oct 2026), with the September broker grid for the PAN India sheet. 121 BLOCKED rollover rows are not written. First build, NOT accepted.",
+      "expect": {
+        "rows": 545,
+        "questions": 0,
+        "flagged": 230
+      }
+    },
+    {
+      "name": "shriram_sep26_addendum",
+      "script": "shriram_broker_grid_to_config.py",
+      "args": [
+        "--grid",
+        "regression/inputs/shriram_sep26_addendum.xlsx",
+        "--addendum",
+        "regression/inputs/shriram_sep26_addendum_addendum.xlsx",
+        "--from-date",
+        "01/09/2026",
+        "--to-date",
+        "31/03/2030"
+      ],
+      "answers": [
+        "",
+        ""
+      ],
+      "note": "September 2026 broker grid + Shriram's September GCV addendum (27 Oct 2026, --addendum): 23 grid row parts replaced, 2 addendum rows added. Against the user's September GCV 4W upload the payin differences fall from 95 to 0 (4,205 of 4,235 shared keys equal; the other 30 are the STP NCB / without-NCB collision, not handled yet by the user's choice). First build, NOT accepted. Changed 27 Oct 2026 (the user): STP rows carry is_ncb NA and is_zd NA, and where grid rows give one entry different payins the LOWEST is written (listed in <out>_lowest_rate_chosen.csv); the expectations below are the numbers after that change. Changed 4 Nov 2026 (the user's corrections of the November upload, see lessons_learned.md): notes the user fixed by hand are now read (Bolero Model only / Except Bolero Model, taxi Dzire / Ambasador / EXCLUDING M&M, NCB Cases 20% and Above, nil-dep payout, cc range exclusion, M&M >1500 cc, goods 3W other than diesel, the EECO / Bolero carve-out of sibling rows) and change notes ('Disc by 5% & PO by 2% increased') are standing; the expectations below are the numbers after that change.",
+      "expect": {
+        "rows": 6612,
+        "questions": 0,
+        "flagged": 432
+      }
+    },
+    {
+      "name": "united_apr26",
+      "script": "united_commission_to_config.py",
+      "args": [
+        "--grid",
+        "regression/inputs/united_apr26.pdf",
+        "--from-date",
+        "01/04/2026",
+        "--to-date",
+        "31/03/2030",
+        "--ref",
+        "regression/references/united_may26_rates_export.csv"
+      ],
+      "answers": [
+        "y",
+        "y"
+      ],
+      "note": "United April 2026 circular ('Commission structure.pdf', new column 'Maximum proposed Commission/Brokerage % w.e.f. 01/04/2026'; Sub Annexure 2 = preferred GCV RTOs, Sub Annexure 3 = the 40% Private Car cities). The reference is the United rows of the user's MAY 2026 upload (from 01-05-2026; the May circular's payouts equal April's): all 333 rows that share a key carry the same rates except 20 GCV rows where May's file looks wrong (the preferred-RTO group written for the 3.5-7.5 T 10% payout and its STP rows, po 3 instead of 20.5); the rest of 'new' / 'removed' are conventions that differ between May's upload and the July-based script (PCV 2W class, School Bus add_tnc text, Private Car segments by cc, 1+5 New rows, Other Bus STP) and the 15% / 10% 'Except RTOs listed in Sub Annexure-2' payouts of 2-3.5 T and 3.5-7.5 T, which are NOT written because the master has no group of the other RTOs of those states (flagged).",
+      "expect": {
+        "rows": 451,
+        "questions": 0,
+        "new": 118,
+        "removed": 47,
+        "changed": 333,
+        "flagged": 471
+      }
+    },
+    {
+      "name": "godigit_oct26",
+      "script": "godigit_agency_to_config.py",
+      "args": [
+        "--grid",
+        "regression/inputs/godigit_oct26.xlsx",
+        "--ref",
+        "regression/references/godigit_oct26_rates_export.csv",
+        "--from-date",
+        "15/10/2026",
+        "--to-date",
+        "31/03/2030"
+      ],
+      "answers": [],
+      "note": "First build (28 Oct 2026) of the Go Digit script, NOT accepted yet. Input = the agency workbook Delhi_PAN_India_Agency.xls (password protected; it is an encrypted .xlsx) saved WITHOUT the password so the regression needs no password or package. Answer key = the user's October upload rates_export (66).csv (47,532 rows, from_date 15/10/2026): 46,854 keys equal with the same rates. Dates 15/10/2026 - 31/03/2030 are the export's. BLESSED 11 Nov 2026 (the user: 'Yes, bless v2') for the 100%-automation pass (P-59 / P-60): 53,212 rows, identical to the earlier baseline in every column except the remarks flags of 53,208 rows; its 4 HR_Bad car third-party rows equal the user's own upload.",
+      "expect": {
+        "rows": 53212,
+        "questions": 0,
+        "new": 6353,
+        "removed": 673,
+        "changed": 2,
+        "flagged": 10
+      }
+    },
+    {
+      "name": "sbi_oct26",
+      "script": "sbi_grid_to_config.py",
+      "args": [
+        "--grid",
+        "regression/inputs/sbi_oct26.xlsx",
+        "--ref",
+        "regression/references/sbi_oct26_rates_export.csv",
+        "--from-date",
+        "03/10/2026",
+        "--to-date",
+        "31/03/2030",
+        "--pc-slab",
+        "1L-3L",
+        "--cv-slab",
+        "3L-4.99L"
+      ],
+      "answers": [],
+      "note": "First build (2 Nov 2026) of the SBI General broker-grid script, NOT accepted yet. Input = 'Agent_C & D Cat. Broker_Grid revision Oct26 W.e.f 3rd Oct' (the rate sheet of 54 clusters x 111 labelled columns, the High-End enabler, the RTO cluster mapping, the declined make / model lists). Answer key = the user's October upload rates_export (69).csv (102,604 rows, from_date 03/10/2026): 94,176 keys equal; the 648 rows that differ in payin / payout are (1) 248 two-wheeler rows, each +1 point (since 3 Nov 2026 the two-wheelers have NO slab - the user: 'there is no slab deduction applicable for two-wheelers' - the October upload had taken the Pvt Car slab off them; the other 400 two-wheeler rows are zero cards) and (2) 400 GCV 4W rows of the cluster DL - NCR in the 2.5-3.5 t bands, each +2 (since 3 Nov 2026 the note 'additional 2%- DL Registration Vehical 2.5 to 3.5 Segment Only' is APPLIED - the user had added the points by hand to the November upload; the October upload left them out; the other 80 rows of that band are the SATP-above-5-years rows whose age cap 25.01 gives them no key in the upload). The 8,428 rows only the upload has are the intended differences (the document wins): GCV 2.5-3.5 t SATP above 5 years goes to 25.01 not 20.01 (4,320), the High-End rows with NCB 'NA' become NCB yes / no with 0 for no and the fuels the sheet names (3,298), the 0-10 year car SATP band becomes 0-1 (zero) + 1-10 (810). Slabs 1L-3L (Private Car) and 3L-4.99L (CV) are the --pc-slab / --cv-slab answers; the script asks them every month. The October grid has no 'In PCV 3W EV Decline' note (new in November 2026), so its PCV 3W Electric rows stay and the run warns that the last grid declined them.",
+      "expect": {
+        "rows": 106644,
+        "questions": 0,
+        "new": 12468,
+        "removed": 8428,
+        "changed": 648,
+        "flagged": 9792
+      }
+    },
+    {
+      "name": "sbi_nov26",
+      "script": "sbi_grid_to_config.py",
+      "args": [
+        "--grid",
+        "regression/inputs/sbi_nov26.xlsx",
+        "--ref",
+        "regression/references/sbi_nov26_rates_export.csv",
+        "--from-date",
+        "01/11/2026",
+        "--to-date",
+        "31/03/2030"
+      ],
+      "answers": [
+        "2",
+        "2",
+        ""
+      ],
+      "note": "November 2026 grid ('Agent, C & D Cat. Broker Grid revision Nov'26 W.e.f 1st Nov'26', valid 1st-30th Nov), ACCEPTED by the user on 3 Nov 2026 after two corrections and the DL rule. Answer key = the user's portal export rates_export (74).csv (106,088 rows; their RTO names are the portal's group names, from_date 01-11-2026). Slabs 1L-3L (Private Car) and 3L-4.99L (CV) = the two answers (option 2 each); the last empty answer is the 'write the file now?' prompt. What the script writes and the export does not have (new 370): the 340 High-End 'MB Class' rows (no make group in the master - the user: keep them written and flagged) and the 30 MISCD 'MH - Rest' rows, which the user mapped to their own group SBI_OCT26_MH_-_Rest_MISD_EX_20_22_23_24_25_26_38_44_55_21 (the 30 'removed'). 'changed' (648) = the user_id 7436 of the export's two-wheeler rows (the script writes 2966 - the user: two-wheelers always carry 2966; their export also has one TW row, id 7, with payin 30 and payout 0). Of the 106,058 keys the script and the export share, every payin is equal and every payout too except that one row, including the user's +2 on the 480 DL - NCR 2.5-3.5 t GCV rows (now applied by the script), the PCV 3W rows without Electric (note 'In PCV 3W EV Decline'; the block header says '(EV Decline)' too) and the two-wheeler rows as printed (no slab).",
+      "expect": {
+        "rows": 106428,
+        "questions": 2,
+        "new": 370,
+        "removed": 30,
+        "changed": 648,
+        "flagged": 10540
+      }
+    },
+    {
+      "name": "shriram_nov26",
+      "script": "shriram_broker_grid_to_config.py",
+      "args": [
+        "--grid",
+        "regression/inputs/shriram_nov26.xlsx",
+        "--ref",
+        "regression/references/shriram_nov26_rates_export.csv",
+        "--from-date",
+        "01/11/2026",
+        "--to-date",
+        "31/03/2030"
+      ],
+      "answers": [],
+      "note": "November 2026 broker grid (4 Nov 2026) as the user's working copy: the RTO working-list column filled by the user, 52 of its cells are the formula =#REF! (read as no record, the master lookup is used). Answer key = the user's portal export after their manual corrections (rates_export (75).csv, 6,394 rows). First build with the corrections of the first build read as rules (Bolero, Dzire, Ambasador, EXCLUDING M&M, NCB 20%, nil-dep payout, cc range, M&M above 1500 cc, EECO / Bolero carve-out, goods 3W other than diesel); ACCEPTED by the user on 4 Nov 2026 (they confirmed Delhi Mahindra_ex_Bolero, no Diesel for MP / RJ goods 3W, the without-nil-dep taxi rows at 42.5 and NA for NCB / ZD on STP; the 1001-1500 cc split was not answered and stays). Expected differences from their export: the 3 make groups the master (25 Oct) does not hold yet (SHRIRAM_PCV_4W_0-7_EX_MAHINDRA_JUNE26, SHRIRAM_PC_EX_Eecco_DECLINE_JUNE26, SHRIRAM_PC_EX_DECLINE_MARUTI_MAHINDRA: 15 rows carry the New changes found text), Delhi row 80 Mahindra_ex_Bolero (the note says so, their export has Mahindra), the 1001-1500 cc exclusion, no Diesel for goods 3W of MP / RJ, the without-nil-dep taxi rows at 42.5, STP is_ncb NA, and their merged 1+3 RTO list (HP, JK, Delhi NCR). Second pass, 4 Nov 2026: the sheet 'Declined vehicle' has a NEW line 'Decline Product [MISC.D - OTHERS (BODY TYPE GARBAGE CARRIER OR GARBAGE COMPACTOR)' that the first build never read. The user chose to write it as T&C: the two body types go into the exclusion text of the 70 MISC-D others rows that have an EX: list ('EX:Crane,Tractor,Ambulance' -> 'EX:Crane,Tractor,Ambulance,Garbage Carrier,Garbage Compactor'); the 80 rows for one body type (JCB, Backhoe, Combined Harvester) are untouched. That is 70 more new and 70 more removed rows against the user's export (new 54 -> 124, removed 45 -> 115): the T&C is part of the key.",
+      "expect": {
+        "rows": 6397,
+        "questions": 0,
+        "new": 124,
+        "removed": 115,
+        "changed": 3,
+        "flagged": 15
+      }
+    },
+    {
+      "name": "icici_cv_oct26",
+      "script": "icici_grid_to_config.py",
+      "args": [
+        "--cv-grid",
+        "regression/inputs/icici_cv_oct26.xlsx",
+        "--ref",
+        "regression/references/icici_cv_oct26_rates_export.csv",
+        "--from-date",
+        "03/10/2026",
+        "--to-date",
+        "31/03/2030"
+      ],
+      "answers": [],
+      "note": "First build (4 Nov 2026) of the ICICI Lombard script, CV part. Input = 'ICICI - CV Grid OCT 26 v2' (sheets COMP, AOTP, CC = Council Call, RTO MASTER = sub-clusters, Negative RTO list, CV NOTES). Answer key = the user's October upload (rates_export (76).csv, 20,112 rows, vertical ICICI-RB-Offline, from_date 03-10-2026). 19,629 of its keys are produced, and every payin and payout of those is equal EXCEPT 8 rows: Jharkhand taxi up to 1000 cc, Old - the grid cell says 'OLD|OTHERS:40%', the upload has 35 (the document wins). The other differences are the user's hand work: 495 rows of theirs are not produced (in the regression's cluster-name mode; 483 in group-name mode) - Council Call entries (CC cells - Gujarat TATA/ASHOK above 5 years at 45, the UP age bands), their own groups (NCR_ONLY, DELHI_ONLY, BR11, BR_02_08, BR_02_09_57, JK02) and a few inconsistencies (Tamil Nadu school bus 6-10 years written as 21 where the cell says 0, West Bengal Mahindra '>=4 yrs' as 4.01); 710 rows are new (698 in group-name mode): cells the user left out (sub-cluster / district rates such as HP1, HR1, GJ1, WB1, Kashmir, Jammu, Purnia, the OTHERS rate of CC cells). 'OTHERS:0%' regions get no zero card (as in the upload, WRITE_OTHERS_ZERO = False); 296 cells / columns are listed in the sheet 'Not written'. Expectations: rows 20,327 written. Assumptions confirmed by the user on 4 Nov 2026.",
+      "expect": {
+        "rows": 20327,
+        "questions": 0,
+        "new": 710,
+        "removed": 495,
+        "changed": 8,
+        "flagged": 11219
+      }
+    },
+    {
+      "name": "icici_pc_tw_nov26",
+      "script": "icici_grid_to_config.py",
+      "args": [
+        "--pc-grid",
+        "regression/inputs/icici_pc_nov26.xlsx",
+        "--tw-grid",
+        "regression/inputs/icici_tw_nov26.xlsx",
+        "--tw-new-grid",
+        "regression/inputs/icici_tw_new_nov26.xlsx",
+        "--ref",
+        "regression/references/icici_pc_tw_nov26_upload.csv",
+        "--from-date",
+        "01/11/2026",
+        "--to-date",
+        "31/03/2030"
+      ],
+      "answers": [],
+      "note": "First build (4 Nov 2026) of the ICICI Lombard script, Private Car + Two-Wheeler + new Two-Wheeler (1+5). Inputs = 'ICICI - Pvt Car Grid Nov 26 Final M2B', 'ICICI - TW Grid Final Nov26 V1' (sheet TW Old) and 'ICICI - NEW 15 Nov 26' (one sheet per OEM: HMC, HMSI, TVS, Suzuki, Yamaha, RE, EV). Answer key = the user's November upload 'ICICI TW PVT CAR.csv' (3,318 rows, from_date 01/11/2026). EVERY one of its 3,318 rows is produced (removed 0) and no rate, payout, pi_type, tariff or date differs; the ONLY column that differs is insurer_vertical (the upload says Not Applicable, the script writes ICICI-RB-Offline since the user's decision of 4 Nov 2026) - that is the 3,318 'changed'. The 24 new rows are the Lakshadweep cluster (in the TW grid, no portal group in the upload). Private Car comprehensive rows are On OD; the 'Used car' and 'Broker' columns are not converted (listed). Assumptions confirmed by the user on 4 Nov 2026.",
+      "expect": {
+        "rows": 3342,
+        "questions": 0,
+        "new": 24,
+        "removed": 0,
+        "changed": 3318,
+        "flagged": 0
+      }
+    },
+    {
+      "name": "icici_cv_nov26",
+      "script": "icici_grid_to_config.py",
+      "args": [
+        "--cv-grid",
+        "regression/inputs/icici_cv_nov26.xlsx",
+        "--from-date",
+        "01/11/2026",
+        "--to-date",
+        "31/03/2030"
+      ],
+      "answers": [
+        "",
+        ""
+      ],
+      "note": "First build (4 Nov 2026) of the ICICI Lombard script on the November CV workbook ('ICICI - CV Nov26 Gird changes': sheets ' COMP' with a leading space, 'TP' for AOTP, 'COUNCIL CALL', 'CV RTO ' with a trailing space, 'RTO CODES', 'CV NOTES' with a Power BI footer, and the sheet 'Nov'26 CHNAGES' that lists the 42 cells that changed against October) - the sheets are found by their headers. No answer key (the November CV upload is not made yet): the baseline is the first build. Compared with the October grid 42 cells changed, which shows in the output as ~170 rate changes and the rows of the changed cells. The two empty answers skip the earlier-upload prompt and confirm the write.",
+      "expect": {
+        "rows": 20317,
+        "questions": 0,
+        "flagged": 7586
+      }
+    },
+    {
+      "name": "godigit_nov26",
+      "script": "godigit_agency_to_config.py",
+      "args": [
+        "--grid",
+        "regression/inputs/godigit_nov26.xlsx",
+        "--from-date",
+        "01/11/2026",
+        "--to-date",
+        "31/03/2030"
+      ],
+      "answers": [
+        "",
+        "1",
+        "y"
+      ],
+      "note": "The November 2026 'communication grid' (13 sheets, all visible, NOT password-protected; every sheet renamed or redesigned: read by headers, P-56). Answers: '' = no earlier upload, 1 = the private-car slab '> 5 Lacs' (the sheet's only slab); the payout column is the setting PAYOUT_MEASURE = avg. Avg CD2 and '> 5 Lacs' are the user's answers of 10 Nov 2026; dates 01/11/2026 - 31/03/2030 assumed from the sheet name and ACCEPTED by the user on 10 Nov 2026 together with the file output/godigit/GODIGIT_UPLOAD_2026-11.csv (133,446 rows, 16,690 flagged). No --ref on purpose: every row carries the new from_date. BLESSED 11 Nov 2026 (the user: 'Yes, bless v2'): the v2 output of the automation pass = 134,179 rows, 436 flagged (was 133,446 / 16,690). The accepted file of 10 Nov was REPLACED by v2 on 17 Nov 2026 (the user: 'Replace with v2'); the old one is in backups\\godigit_accepted_20261110.",
+      "expect": {
+        "rows": 134179,
+        "questions": 1,
+        "flagged": 436
+      }
+    },
+    {
+      "name": "indusind_nov26",
+      "script": "indusind_grid_to_config.py",
+      "args": [
+        "--grid",
+        "regression/inputs/indusind_nov26.xlsx",
+        "--ref",
+        "regression/references/indusind_nov26_rates_export.csv",
+        "--from-date",
+        "01/11/2026",
+        "--to-date",
+        "31/03/2030"
+      ],
+      "answers": [
+        ""
+      ],
+      "note": "first build (20 Nov 2026), not yet accepted by the user",
+      "expect": {
+        "rows": 11461,
+        "questions": 0,
+        "new": 157,
+        "removed": 79,
+        "changed": 34,
+        "flagged": 11461
+      }
+    },
+    {
+      "name": "indusind_oct26",
+      "script": "indusind_grid_to_config.py",
+      "args": [
+        "--grid",
+        "regression/inputs/indusind_oct26.xlsx",
+        "--ref",
+        "regression/references/indusind_oct26_rates_export.csv",
+        "--from-date",
+        "13/10/2026",
+        "--to-date",
+        "31/10/2026"
+      ],
+      "answers": [
+        "",
+        ""
+      ],
+      "note": "first build (23 Nov 2026), not yet accepted by the user: the October 2026 workbook 'PO Grid Broking Premier 11-Oct 26' (a new layout generation) against the user's October export rates_export (92).csv - every payin / payout of the 8,784 rows is theirs; 181 removed = their 30 M & HCV rows (decision 3: not written) + 72 nil-dep diesel taxi rows + 79 earlier Private Car rows; the make groups / T&C they named another way are listed in 'Other names vs earlier upload'",
+      "expect": {
+        "rows": 8784,
+        "questions": 0,
+        "new": 0,
+        "removed": 181,
+        "changed": 0,
+        "flagged": 8784
+      }
+    }
+  ]
+}

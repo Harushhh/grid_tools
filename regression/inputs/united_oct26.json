@@ -1,0 +1,854 @@
+{
+ "transcription_of": "04001051.pdf (United India Insurance, HO:MKTG:CIR:12:26-27, dated 23.10.2026; Motor LOB effective 26.10.2026)",
+ "source_sha256": "fec92aa33ecb419e9d667282d50795a6f61a7f68e99fee840645207a5165203e",
+ "note": "Pages 3-7 of the scanned PDF, read off the page images by Claude on 26 Oct 2026. Not transcribed: page 1 (cover letter, Fire and Engineering commission and the five Motor rules), page 2 (Fire and Engineering table). The October PDF carries NO Sub Annexure 2 / 3 / 4 pages. Format: see read_transcription in united_commission_to_config.py.",
+ "tables": [
+  {
+   "page": 3,
+   "columns": 7,
+   "rows": [
+    [
+     {
+      "t": "INTERMEDIARY COMMISSION/BROKERAGE MOTOR DEPARTMENT Sub Annexure 1",
+      "rs": 1,
+      "cs": 7
+     }
+    ],
+    [
+     {
+      "t": "Two Wheelers Electric and Non-Electric",
+      "rs": 1,
+      "cs": 7
+     }
+    ],
+    [
+     {
+      "t": "S No",
+      "rs": 2,
+      "cs": 1
+     },
+     {
+      "t": "Class of Vehicles",
+      "rs": 2,
+      "cs": 1
+     },
+     {
+      "t": "Cubic Capacity (CC) Band",
+      "rs": 2,
+      "cs": 1
+     },
+     {
+      "t": "Existing Pay-out (w.e.f. 01-08-2026)",
+      "rs": 1,
+      "cs": 2
+     },
+     {
+      "t": "Revised Pay-out (w.e.f. 26-10-2026)",
+      "rs": 1,
+      "cs": 2
+     }
+    ],
+    [
+     "Commission",
+     "States (based on Registration of Vehicle)",
+     "Commission",
+     "States (based on Registration of Vehicle)"
+    ],
+    [
+     {
+      "t": "1",
+      "rs": 8,
+      "cs": 1
+     },
+     {
+      "t": "Two Wheeler (Bundled /Package /SATP /Long Term Liability)",
+      "rs": 8,
+      "cs": 1
+     },
+     {
+      "t": "Upto 150 CC",
+      "rs": 2,
+      "cs": 1
+     },
+     "5.0%",
+     "Tamil Nadu, Pondicherry, Kerala, Karnataka, Madhya Pradesh, Assam",
+     "5.0%",
+     "Tamil Nadu, Pondicherry, Kerala, Karnataka, Madhya Pradesh, Assam"
+    ],
+    [
+     "27.5%",
+     "Other than above States",
+     "27.5%",
+     "Other than above States"
+    ],
+    [
+     {
+      "t": "Above 150 CC and Less than 350 CC",
+      "rs": 2,
+      "cs": 1
+     },
+     "5.0%",
+     "Tamil Nadu, Pondicherry, Kerala, Karnataka, Madhya Pradesh, Assam",
+     "5.0%",
+     "Tamil Nadu, Pondicherry, Kerala, Karnataka, Madhya Pradesh, Assam"
+    ],
+    [
+     "22.5%",
+     "Other than above States",
+     "22.5%",
+     "Other than above States"
+    ],
+    [
+     {
+      "t": "Above 350 CC",
+      "rs": 2,
+      "cs": 1
+     },
+     "5.0%",
+     "Tamil Nadu, Pondicherry, Kerala, Karnataka, Madhya Pradesh, Assam",
+     "5.0%",
+     "Tamil Nadu, Pondicherry, Kerala, Karnataka, Madhya Pradesh, Assam"
+    ],
+    [
+     "17.5%",
+     "Other than above States",
+     "17.5%",
+     "Other than above States"
+    ],
+    [
+     {
+      "t": "Electric Vehicles",
+      "rs": 2,
+      "cs": 1
+     },
+     "5.0%",
+     "Tamil Nadu, Pondicherry, Kerala, Karnataka, Madhya Pradesh, Assam",
+     "5.0%",
+     "Tamil Nadu, Pondicherry, Kerala, Karnataka, Madhya Pradesh, Assam"
+    ],
+    [
+     "22.5%",
+     "Other than above States",
+     "22.5%",
+     "Other than above States"
+    ],
+    [
+     "2",
+     "Two Wheeler SAOD",
+     "All bands including Electric",
+     "20.0%",
+     "All States",
+     "20.0%",
+     "All States"
+    ],
+    [
+     {
+      "t": "3",
+      "rs": 2,
+      "cs": 1
+     },
+     {
+      "t": "Two Wheeler Long Term Package (5+5)",
+      "rs": 2,
+      "cs": 1
+     },
+     {
+      "t": "All bands including Electric",
+      "rs": 2,
+      "cs": 1
+     },
+     "5.0%",
+     "Tamil Nadu, Pondicherry, Kerala, Karnataka, Madhya Pradesh, Assam",
+     "5.0%",
+     "Tamil Nadu, Pondicherry, Kerala, Karnataka, Madhya Pradesh, Assam"
+    ],
+    [
+     "17.5%",
+     "Other than above States",
+     "17.5%",
+     "Other than above States"
+    ]
+   ]
+  },
+  {
+   "page": 4,
+   "columns": 7,
+   "rows": [
+    [
+     {
+      "t": "Passenger Carrying Vehicles (Electric and Non-Electric Vehicles)",
+      "rs": 1,
+      "cs": 7
+     }
+    ],
+    [
+     {
+      "t": "S No",
+      "rs": 2,
+      "cs": 1
+     },
+     {
+      "t": "Class of Vehicles",
+      "rs": 2,
+      "cs": 1
+     },
+     {
+      "t": "Passenger Carrying Capacity",
+      "rs": 2,
+      "cs": 1
+     },
+     {
+      "t": "Existing Pay-out (w.e.f. 01-08-2026)",
+      "rs": 1,
+      "cs": 2
+     },
+     {
+      "t": "Revised Pay-out (w.e.f. 26-10-2026)",
+      "rs": 1,
+      "cs": 2
+     }
+    ],
+    [
+     "Commission",
+     "States (based on Registration of Vehicle)",
+     "Commission",
+     "States (based on Registration of Vehicle)"
+    ],
+    [
+     {
+      "t": "1",
+      "rs": 8,
+      "cs": 1
+     },
+     {
+      "t": "4 W PCV > 6 Passengers",
+      "rs": 8,
+      "cs": 1
+     },
+     {
+      "t": "Seating Capacity <= 10 (All Fuel)",
+      "rs": 2,
+      "cs": 1
+     },
+     "7.5%",
+     "Haryana, Rajasthan",
+     "7.5%",
+     "Haryana, Rajasthan"
+    ],
+    [
+     "30.0%",
+     "Other than above States",
+     "30.0%",
+     "Other than above States"
+    ],
+    [
+     {
+      "t": "10 < Seating Capacity <= 20 (All Fuel)",
+      "rs": 2,
+      "cs": 1
+     },
+     "7.5%",
+     "Tamil Nadu, Pondicherry, Karnataka",
+     "7.5%",
+     "Tamil Nadu, Pondicherry, Karnataka"
+    ],
+    [
+     "30.0%",
+     "Other than above States",
+     "30.0%",
+     "Other than above States"
+    ],
+    [
+     {
+      "t": "20 <Seating Capacity <= 30 (Except EV)",
+      "rs": 2,
+      "cs": 1
+     },
+     "5.0%",
+     "Tamil Nadu, Pondicherry, Madhya Pradesh, Uttar Pradesh",
+     "5.0%",
+     "Tamil Nadu, Pondicherry, Madhya Pradesh, Uttar Pradesh"
+    ],
+    [
+     "10.0%",
+     "Other than above States",
+     "10.0%",
+     "Other than above States"
+    ],
+    [
+     "Seating Capacity >30 (Except EV)",
+     "OD - 10%, TP - 0%",
+     "All States",
+     "OD - 10%, TP - 0%",
+     "All States"
+    ],
+    [
+     "Seating Capacity >20 (Electric Vehicles)",
+     "10.0%",
+     "All States",
+     "10.0%",
+     "All States"
+    ],
+    [
+     "2",
+     "Two Wheeler (PCV)",
+     "All bands including Electric",
+     "10.0%",
+     "All States",
+     "10.0%",
+     "All States"
+    ],
+    [
+     {
+      "t": "3",
+      "rs": 3,
+      "cs": 1
+     },
+     {
+      "t": "Three Wheeled (Passenger Carrying Vehicles)",
+      "rs": 3,
+      "cs": 1
+     },
+     {
+      "t": "All bands including Electric",
+      "rs": 3,
+      "cs": 1
+     },
+     "25.0%",
+     "Madhya Pradesh",
+     "25.0%",
+     "Madhya Pradesh"
+    ],
+    [
+     "60.0%",
+     "West Bengal, Maharashtra, Gujarat, Delhi, Uttarakhand, Punjab, Goa, Jammu & Kashmir",
+     "60.0%",
+     "West Bengal, Maharashtra, Gujarat, Delhi, Uttarakhand, Punjab, Goa, Jammu & Kashmir"
+    ],
+    [
+     "40.0%",
+     "Other than above States",
+     "40.0%",
+     "Other than above States"
+    ],
+    [
+     "4",
+     "Educational Institution, Staff & School Buses",
+     "All Passenger Carrying Capacity (including Electric)",
+     "62.5%",
+     "All States",
+     "62.5%",
+     "All States"
+    ],
+    [
+     {
+      "t": "5",
+      "rs": 2,
+      "cs": 1
+     },
+     {
+      "t": "Taxis",
+      "rs": 2,
+      "cs": 1
+     },
+     {
+      "t": "All CC Bands (including Electric) - Both Package policy & Stand-Alone Third Party policy (SATP)",
+      "rs": 2,
+      "cs": 1
+     },
+     "15.0%",
+     "Haryana, Karnataka, Rajasthan, Tamil Nadu, Pondicherry, Uttar Pradesh, Madhya Pradesh",
+     "10.0%",
+     "Haryana, Karnataka, Rajasthan, Tamil Nadu, Pondicherry, Uttar Pradesh, Madhya Pradesh"
+    ],
+    [
+     "25.0%",
+     "Other than above States",
+     "35.0%",
+     "Other than above States"
+    ]
+   ]
+  },
+  {
+   "page": 5,
+   "columns": 7,
+   "rows": [
+    [
+     {
+      "t": "Goods Carrying Vehicles (Electric and Non-Electric Vehicles)",
+      "rs": 1,
+      "cs": 7
+     }
+    ],
+    [
+     {
+      "t": "S No",
+      "rs": 2,
+      "cs": 1
+     },
+     {
+      "t": "Class of Vehicles",
+      "rs": 2,
+      "cs": 1
+     },
+     {
+      "t": "GVW in Kgs",
+      "rs": 2,
+      "cs": 1
+     },
+     {
+      "t": "Existing Pay-out (w.e.f. 01-08-2026)",
+      "rs": 1,
+      "cs": 2
+     },
+     {
+      "t": "Revised Pay-out (w.e.f. 26-10-2026)",
+      "rs": 1,
+      "cs": 2
+     }
+    ],
+    [
+     "Commission",
+     "States (based on Registration of Vehicle)",
+     "Commission",
+     "States (based on Registration of Vehicle)"
+    ],
+    [
+     {
+      "t": "1",
+      "rs": 14,
+      "cs": 1
+     },
+     {
+      "t": "Goods Carrying Vehicle",
+      "rs": 14,
+      "cs": 1
+     },
+     {
+      "t": "a. GVW <= 2000",
+      "rs": 2,
+      "cs": 1
+     },
+     "50.0%",
+     "Uttar Pradesh",
+     "50.0%",
+     "Uttar Pradesh"
+    ],
+    [
+     "60.0%",
+     "Other than above State",
+     "60.0%",
+     "Other than above State"
+    ],
+    [
+     {
+      "t": "b. 2000 < GVW <= 3500",
+      "rs": 4,
+      "cs": 1
+     },
+     "15.0%",
+     "Madhya Pradesh, Tamil Nadu, Uttar Pradesh, Haryana",
+     "15.0%",
+     "Madhya Pradesh, Tamil Nadu, Uttar Pradesh, Haryana (Except RTOs listed in Sub Annexure 2 where commission would be 56.5%)"
+    ],
+    [
+     "35.0%",
+     "Rajasthan (Except RTOs listed in Sub Annexure 2 where commission would be 56.5%)",
+     "35.0%",
+     "Rajasthan (Except RTOs listed in Sub Annexure 2 where commission would be 56.5%)"
+    ],
+    [
+     "45.0%",
+     "Kerala, Karnataka",
+     "45.0%",
+     "Kerala, Karnataka"
+    ],
+    [
+     "56.5%",
+     "Other than above States",
+     "56.5%",
+     "Other than above States"
+    ],
+    [
+     {
+      "t": "c. 3500 < GVW <= 7500",
+      "rs": 2,
+      "cs": 1
+     },
+     "10.0%",
+     "Haryana, Madhya Pradesh, Rajasthan, Tamil Nadu, Pondicherry, Uttar Pradesh (Except RTOs listed in Sub Annexure 3)",
+     "10.0%",
+     "Haryana, Madhya Pradesh, Rajasthan, Tamil Nadu, Pondicherry, Uttar Pradesh"
+    ],
+    [
+     "27.5%",
+     "Other than above States",
+     "27.5%",
+     "Other than above States"
+    ],
+    [
+     {
+      "t": "d. 7500 < GVW <= 10000",
+      "rs": 3,
+      "cs": 1
+     },
+     "5.0%",
+     "Tamil Nadu, Pondicherry",
+     "5.0%",
+     "Tamil Nadu, Pondicherry"
+    ],
+    [
+     "15.0%",
+     "Rajasthan",
+     "15.0%",
+     "Rajasthan"
+    ],
+    [
+     "22.5%",
+     "Other than above States",
+     "27.5%",
+     "Other than above States"
+    ],
+    [
+     "e. 10000 < GVW <=12000",
+     "2.5%",
+     "All States",
+     "2.5%",
+     "All States"
+    ],
+    [
+     {
+      "t": "f. 12000 < GVW <= 20000",
+      "rs": 2,
+      "cs": 1
+     },
+     "5.0%",
+     "Haryana, Madhya Pradesh, Rajasthan, Tamil Nadu, Pondicherry, Uttar Pradesh, Karnataka and Kerala",
+     "5.0%",
+     "Haryana, Madhya Pradesh, Rajasthan, Tamil Nadu, Pondicherry, Uttar Pradesh, Karnataka and Kerala"
+    ],
+    [
+     "15.0%",
+     "Other than above States",
+     "15.0%",
+     "Other than above States"
+    ]
+   ]
+  },
+  {
+   "page": 6,
+   "columns": 7,
+   "rows": [
+    [
+     {
+      "t": "Goods Carrying Vehicles (Electric and Non-Electric Vehicles)",
+      "rs": 1,
+      "cs": 7
+     }
+    ],
+    [
+     {
+      "t": "S No",
+      "rs": 2,
+      "cs": 1
+     },
+     {
+      "t": "Class of Vehicles",
+      "rs": 2,
+      "cs": 1
+     },
+     {
+      "t": "GVW in Kgs",
+      "rs": 2,
+      "cs": 1
+     },
+     {
+      "t": "Existing Pay-out (w.e.f. 01-08-2026)",
+      "rs": 1,
+      "cs": 2
+     },
+     {
+      "t": "Revised Pay-out (w.e.f. 26-10-2026)",
+      "rs": 1,
+      "cs": 2
+     }
+    ],
+    [
+     "Commission",
+     "States (based on Registration of Vehicle)",
+     "Commission",
+     "States (based on Registration of Vehicle)"
+    ],
+    [
+     {
+      "t": "1",
+      "rs": 8,
+      "cs": 1
+     },
+     {
+      "t": "Goods Carrying Vehicle",
+      "rs": 8,
+      "cs": 1
+     },
+     {
+      "t": "g. 20000 < GVW <= 25000",
+      "rs": 2,
+      "cs": 1
+     },
+     "5.0%",
+     "Haryana, Madhya Pradesh, Rajasthan, Tamil Nadu, Pondicherry, Uttar Pradesh, Karnataka and Kerala",
+     "5.0%",
+     "Haryana, Madhya Pradesh, Rajasthan, Tamil Nadu, Pondicherry, Uttar Pradesh, Karnataka and Kerala"
+    ],
+    [
+     "15.0%",
+     "Other than above States",
+     "25.0%",
+     "Other than above States"
+    ],
+    [
+     {
+      "t": "h. 25000 < GVW <= 32000",
+      "rs": 2,
+      "cs": 1
+     },
+     "2.5%",
+     "Haryana, Madhya Pradesh, Rajasthan, Tamil Nadu, Pondicherry, Uttar Pradesh, Karnataka and Kerala",
+     "2.5%",
+     "Haryana, Madhya Pradesh, Rajasthan, Tamil Nadu, Pondicherry, Uttar Pradesh, Karnataka and Kerala"
+    ],
+    [
+     "12.5%",
+     "Other than above States",
+     "12.5%",
+     "Other than above States"
+    ],
+    [
+     "i. 32000 < GVW <= 40000",
+     "5.0%",
+     "All States",
+     "5.0%",
+     "All States"
+    ],
+    [
+     {
+      "t": "j. GVW > 40000",
+      "rs": 2,
+      "cs": 1
+     },
+     "0.0%",
+     "Haryana, Madhya Pradesh, Rajasthan, Tamil Nadu, Pondicherry, Uttar Pradesh, Karnataka and Kerala",
+     "0.0%",
+     "Haryana, Madhya Pradesh, Rajasthan, Tamil Nadu, Pondicherry, Uttar Pradesh, Karnataka and Kerala"
+    ],
+    [
+     "2.5%",
+     "Other than above States",
+     "2.5%",
+     "Other than above States"
+    ],
+    [
+     "k. E-Cart",
+     "50.0%",
+     "All States",
+     "50.0%",
+     "All States"
+    ]
+   ]
+  },
+  {
+   "page": 6,
+   "columns": 7,
+   "rows": [
+    [
+     {
+      "t": "Miscellaneous Vehicles, Motor Trade and Standalone CPA",
+      "rs": 1,
+      "cs": 7
+     }
+    ],
+    [
+     {
+      "t": "S No",
+      "rs": 2,
+      "cs": 1
+     },
+     {
+      "t": "Class of Vehicles",
+      "rs": 2,
+      "cs": 1
+     },
+     {
+      "t": "Bands / Vehicle Type",
+      "rs": 2,
+      "cs": 1
+     },
+     {
+      "t": "Existing Pay-out (w.e.f. 01-08-2026)",
+      "rs": 1,
+      "cs": 2
+     },
+     {
+      "t": "Revised Pay-out (w.e.f. 26-10-2026)",
+      "rs": 1,
+      "cs": 2
+     }
+    ],
+    [
+     "Commission",
+     "States (based on Registration of Vehicle)",
+     "Commission",
+     "States (based on Registration of Vehicle)"
+    ],
+    [
+     {
+      "t": "1",
+      "rs": 3,
+      "cs": 1
+     },
+     {
+      "t": "Misc Vehicles",
+      "rs": 3,
+      "cs": 1
+     },
+     "Ambulances",
+     "20.0%",
+     {
+      "t": "All States",
+      "rs": 3,
+      "cs": 1
+     },
+     "20.0%",
+     {
+      "t": "All States",
+      "rs": 3,
+      "cs": 1
+     }
+    ],
+    [
+     "Agricultural Tractors",
+     "40.0%",
+     "40.0%"
+    ],
+    [
+     "All other miscellaneous vehilces including standalone trailers",
+     "10.0%",
+     "10.0%"
+    ],
+    [
+     "2",
+     "Motor Trade",
+     "Road Risk, Transit and Internal Risk",
+     "5.0%",
+     "All States",
+     "5.0%",
+     "All States"
+    ],
+    [
+     "3",
+     "Standalone CPA",
+     "--",
+     "15.0%",
+     "All States",
+     "15.0%",
+     "All States"
+    ]
+   ]
+  },
+  {
+   "page": 7,
+   "columns": 6,
+   "rows": [
+    [
+     {
+      "t": "Private Car",
+      "rs": 1,
+      "cs": 6
+     }
+    ],
+    [
+     "S No",
+     "Policy Type",
+     "Segment",
+     "States",
+     "Existing Commission (w.e.f. 01-08-2026)",
+     "Revised Commission (w.e.f. 26-10-2026)"
+    ],
+    [
+     {
+      "t": "1",
+      "rs": 7,
+      "cs": 1
+     },
+     {
+      "t": "Non Electric - Bundled (1+3)/ Package/ Long term Package (3+3)/ SATP/ Long term Liability",
+      "rs": 7,
+      "cs": 1
+     },
+     "Upto 1000 CC",
+     "All",
+     "20.0%",
+     "17.5%"
+    ],
+    [
+     {
+      "t": ">1000 CC and upto 1200 CC",
+      "rs": 2,
+      "cs": 1
+     },
+     "Karnataka, Haryana, Madhya Pradesh, Tamil Nadu, Pondicherry",
+     "20.0%",
+     "17.5%"
+    ],
+    [
+     "Other than above States",
+     "40.0%",
+     "35.0%"
+    ],
+    [
+     ">1200 CC and upto 1500 CC",
+     "All",
+     "20.0%",
+     "15.0%"
+    ],
+    [
+     ">1500 CC and upto 2000 CC",
+     "All",
+     "40.0%",
+     "35.0%"
+    ],
+    [
+     {
+      "t": ">2000 CC",
+      "rs": 2,
+      "cs": 1
+     },
+     "Karnataka, Haryana, Madhya Pradesh, Chhattisgarh, Rajasthan, Tamil Nadu, Pondicherry & Uttar Pradesh",
+     "15.0%",
+     "15.0%"
+    ],
+    [
+     "Other than above States",
+     "30.0%",
+     "30.0%"
+    ],
+    [
+     "2",
+     "Non Electric & Electric - SAOD",
+     "All Vehicles",
+     "All",
+     "15.0%",
+     "25.0%"
+    ],
+    [
+     "3",
+     "Electric Cars - Bundled (1+3)/ Package/ Long term Package (3+3)/ SATP/ Long term Liability",
+     "All Vehicles",
+     "All",
+     "35.0%",
+     "35.0%"
+    ]
+   ]
+  }
+ ]
+}

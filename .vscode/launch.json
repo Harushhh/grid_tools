@@ -1,0 +1,115 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Liberty  (asks me what it needs)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/liberty_grid_to_config.py",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/output",
+            "justMyCode": true
+        },
+        {
+            "name": "Magma  (asks me what it needs)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/magma_grid_to_config.py",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/output",
+            "justMyCode": true
+        },
+        {
+            "name": "RSA GCV 4W Comp  (asks me what it needs)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/rsa_gcv4w_comp_to_config.py",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/output",
+            "justMyCode": true
+        },
+        {
+            "name": "RSA Private Car  (asks me what it needs)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/rsa_pvtcar_to_config.py",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/output",
+            "justMyCode": true
+        },
+        {
+            "name": "United PDF  (asks me what it needs)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/united_commission_to_config.py",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/output",
+            "justMyCode": true
+        },
+        {
+            "name": "Shriram Broker Grid  (asks me what it needs)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/shriram_broker_grid_to_config.py",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/output",
+            "justMyCode": true
+        },
+        {
+            "name": "Shriram Two-Wheeler  (asks me what it needs)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/shriram_2w_to_config.py",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/output",
+            "justMyCode": true
+        },
+        {
+            "name": "Go Digit  (asks me what it needs)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/godigit_agency_to_config.py",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/output",
+            "justMyCode": true
+        },
+        {
+            "name": "SBI General  (asks me what it needs)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/sbi_grid_to_config.py",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/output",
+            "justMyCode": true
+        },
+        {
+            "name": "ICICI Lombard  (asks me what it needs)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/icici_grid_to_config.py",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/output",
+            "justMyCode": true
+        },
+        {
+            "name": "IndusInd General / Reliance  (asks me what it needs)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/indusind_grid_to_config.py",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/output",
+            "justMyCode": true
+        }
+    ]
+}
